@@ -1,0 +1,31 @@
+//
+//  TTButtonLineView.h
+//  JinCheng
+//
+//  Created by TT_code on 16/4/20.
+//  Copyright © 2016年 TT_code. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface TTButtonLineView : UIView
+typedef void (^CollecButtonClickBlock) (NSInteger tag);
+
+
+
+@property(nonatomic,strong)CollecButtonClickBlock block;
+
+
+/**
+ *  创建视图
+ *
+ *  @param fram      fram
+ *  @param dataarray 按钮title  数组
+ *  @param linecolor 线  颜色
+ *  @param block
+ *
+ *  @return
+ */
++(TTButtonLineView*)CreateButtonLineWithFram:(CGRect)fram  dataarray:(NSArray*)dataarray linecolor:(UIColor*)linecolor   ButtonClickBlock:(void (^)(NSInteger tag))block;
+
+@end
